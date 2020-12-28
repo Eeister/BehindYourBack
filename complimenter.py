@@ -30,6 +30,18 @@ while True:
         rect = cv2.rectangle(img, (x,y), (x+w, y+h), (255,122,0),2) #draws a rectangle on the webcam frame using the x and y coord and width and height, and color and thickness of line
 
     cv2.imshow("img",img) #shows the webcam frame
+    
+    font = cv2.FONT_HERSHEY_SIMPLEX #predetermined settings for the font display
+        bottomLeftCornerOfText = (0,20)
+        fontScale              = 1
+        fontColor              = (255,255,255)
+        lineType               = 2 
+        cv2.putText(img,'Press esc to close out :)', 
+            bottomLeftCornerOfText, 
+            font, 
+            fontScale,
+            fontColor,
+            lineType) #displays font on webcam screen
 
     endTime = time.time() #seoncds passed 
 
